@@ -15,21 +15,21 @@
 /* --font-body: 'Poppins';    */
  /* set to 16px */
   font-size: 100%;  
+  
+  
+  
+  /* width */
+  /* 1440 - 768 */
+  /* 768 - 375 */
+  
+  
+    /* height */
+    /* 1029 - 1206 */
+    /* 1206 - 1405 */
+    
+    
     /* ## Colors */
-
 /* ### Primary */
-
-
-
-/* width */
-/* 1440 - 768 */
-/* 768 - 375 */
-
-/* height */
-/* 1029 - 1206 */
-/* 1206 - 1405 */
-
-
 --red: hsl(0, 78%, 62%);
 --cyan: hsl(180, 62%, 55%);
 --orange: hsl(34, 97%, 64%);
@@ -72,7 +72,6 @@
   --h5-letter-spacing: 0px;
 
   /* Mobile section */
-
   --h1-mobile-size: 1.5rem;      /* 24px */
   --h1-mobile-weight: 600;
   --h1-mobile-line-height: 1.4;
@@ -88,7 +87,7 @@
   --h4-mobile-line-height: 1.4;
   --h4-mobile-letter-spacing: 0px;
 
-  /* beklow 340px width */
+  /* below 340px width */
   /* --below-320-size: .9375rem;      15px */
   --below-320-size: 1rem;      /* 16px */
   --below-320-weight-600: 600;
