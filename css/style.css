@@ -6,13 +6,12 @@
 }
 
  body{
+  font-family: 'Poppins', sans-serif;
   background-color: red;
 }
 
 :root{
 
-/* --font-family: 'Poppins', sans-serif;    */
-/* --font-body: 'Poppins';    */
  /* set to 16px */
   font-size: 100%;  
   
@@ -36,7 +35,6 @@
 --blue: hsl(212, 86%, 64%);
 
 /* ### Neutral */
-
 --grey-500: hsl(234, 12%, 34%);
 --grey-400: hsl(212, 6%, 44%);
 --white: hsl(0, 0%, 100%);
