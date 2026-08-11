@@ -7,7 +7,6 @@
 
  body{
   font-family: 'Poppins', sans-serif;
-  /* background-color: red; */
   background-color: var(--white);
 }
 
@@ -15,19 +14,7 @@
 
  /* set to 16px */
   font-size: 100%;  
-  
-  
-  
-  /* width */
-  /* 1440 - 768 */
-  /* 768 - 375 */
-  
-  
-    /* height */
-    /* 1029 - 1206 */
-    /* 1206 - 1405 */
-    
-    
+      
     /* ## Colors */
 /* ### Primary */
 --red: hsl(0, 78%, 62%);
@@ -86,14 +73,12 @@
   --h4-mobile-line-height: 1.4;
   --h4-mobile-letter-spacing: 0px;
 
-  /* below 340px width */
-  /* --below-320-size: .9375rem;      15px */
-  --below-320-size: 1rem;      /* 16px */
-  --below-320-weight-600: 600;
-  --below-320-weight-200: 200;
-  /* --below-320-height: 1.4; */
-  --below-320-height: 1;
-  --below-320-letter-spacing: 0px;
+  /* below 352px width */
+  --below-352-size: 1rem;     /* 16px */
+  --below-352-weight-600: 600;
+  --below-352-weight-200: 200;
+  --below-352-height: 1;
+  --below-352-letter-spacing: 0px;
 
   /* attribution */
   --attribution-size:.625rem;
@@ -114,7 +99,6 @@
   grid-template-rows: minmax(102px, 1fr) minmax(0, 743px) minmax(102px, 1fr);
   justify-content: center;
   align-content: start;
-  /* background-color: green; */
 }
 
 .row-title{
@@ -124,7 +108,6 @@
   display: grid;
   grid-template-rows: 1fr 1fr; 
   gap: 16px;
-  /* background-color:powderblue; */
   align-self: start;
 }
 
@@ -149,12 +132,10 @@
   grid-template-rows: repeat(266,minmax(0,1fr));
   max-width: 1114px;
   height: 532px;
-  /* background-color: white; */
 }
 
-/* reusable */
+/* reusable box */
 .box{
-  /* background-color: white; */
   display: grid;
   grid-auto-flow: row;
   padding: 32px;
@@ -165,8 +146,6 @@
 
 /* team box */
 .one{
-  /* col  175
-  row 125 */
   grid-column: 192/367;
   grid-row: 1/126;
   border-top:4px solid var(--red);
@@ -267,8 +246,6 @@ h5{
    width: 50px;
 }
 
-
-/* attribution */
 .attribution{
   grid-column: 2;
   grid-row:3;
@@ -277,18 +254,13 @@ h5{
   font-size: var(--attribution-size);
 }
 
-/* break point 1060 */
-/*  tablet 768 x 1206*/
 
+/* break point 1066 */
+/*  tablet 768 x 1206*/
 @media screen and (max-width:1066px){
   .outer-wrapper{
     grid-template-columns: minmax(54px, 1fr) minmax(0, 660px) minmax(54px, 1fr);
    grid-template-rows: minmax(80px, 1fr) minmax(0, 1046px) minmax(80px, 1fr);
-/* height
-1206
-less 74
-158
-814 = 160*/
   }
 
   .row-title{
@@ -301,10 +273,6 @@ less 74
     max-width: 660px;
     height: 814px;
   }
-
-
-  /* 314 x 250 */
-  /* half 157 x 125 */
 
   /* team */
   .one{
@@ -337,13 +305,8 @@ less 74
 @media screen and (max-width:554px){
 
   .outer-wrapper{
-    /* grid-template-rows: minmax(80px, 1fr) minmax(0, 1046px) minmax(80px, 1fr); */
     grid-template-rows: minmax(60px, 1fr) minmax(0, 1046px) minmax(60px, 1fr);
   }
-
-  /* .row-title{
-    height: 147px;
-  } */
 
   h1{
   font-size: var(--h1-mobile-size);
@@ -371,28 +334,13 @@ h4{
   text-align: center;
   color: var(--grey-500);
 }
-
-
 }
 
 
-/* @media screen and (max-width:375px){ */
 @media screen and (max-width:540px){
   .outer-wrapper{
     grid-template-columns: minmax(30px, 1fr) minmax(0, 314px) minmax(30px, 1fr);
     grid-template-rows: minmax(47px, 1fr) minmax(0, 1311px) minmax(47px, 1fr);
-/* 375 x 1405
-/* height
-1405
-less 60
-158
-1096 = 94*/
-/* 94 / 2 = 47 */
-
-/* width
-375
-less 314
-=61 */
   }
 
 
@@ -407,11 +355,8 @@ less 314
     height: 1096px;
   }
 
-/* boxes 314 x 250 */
 /* team box */
   .one{
-  /* col  175
-  row 125 */
   grid-column: 1/157;
   grid-row: 141/266;
 }
@@ -490,21 +435,20 @@ h5{
   }
 
   h1, h2{
-   font-size: var(--below-320-size);
-   font-weight: var(--below-320-weight-600);
-   line-height: var(--below-320-line-height);
-   letter-spacing: var(--below-320-letter-spacing);
+   font-size: var(--below-352-size);
+   font-weight: var(--below-352-weight-600);
+   line-height: var(--below-352-line-height);
+   letter-spacing: var(--below-352-letter-spacing);
   }
 
   h2{
-   font-weight: var(--below-320-weight-200);
+   font-weight: var(--below-352-weight-200);
   }
 
   .attribution{
     display: grid;
     grid-template-rows: 1fr 1fr;
     width:100%;
-    /* justify-self: center; */
   }
 
   article{
