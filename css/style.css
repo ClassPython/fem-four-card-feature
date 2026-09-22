@@ -5,53 +5,48 @@
    box-sizing: border-box;
 }
 
- body{
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--white);
-}
-
 :root{
 
- /* set to 16px */
+  /* set to 16px */
   font-size: 100%;  
-      
-    /* ## Colors */
+  
+  /* ## Colors */
 /* ### Primary */
---red: hsl(0, 78%, 62%);
---cyan: hsl(180, 62%, 55%);
---orange: hsl(34, 97%, 64%);
---blue: hsl(212, 86%, 64%);
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
 
 /* ### Neutral */
---grey-500: hsl(234, 12%, 34%);
---grey-400: hsl(212, 6%, 44%);
---white: hsl(0, 0%, 100%);
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
 
 /* pre set typography */
- /* pre set 1  poppins semi-bold*/
+/* pre set 1  poppins semi-bold*/
   --h1-size: 2.25rem;      /* 36px */
   --h1-weight: 600;
   --h1-line-height: 1.4;
   --h1-letter-spacing: .25px;
-  
-  /* pre set 2  poppins extra light*/
+
+/* pre set 2  poppins extra light*/
   --h2-size: 2.25rem;      /* 36px */
   --h2-weight: 200;
   --h2-line-height: 1.4;
   --h2-letter-spacing: .25px;
-   /* pre set 3  poppins semi-bold*/
+  /* pre set 3  poppins semi-bold*/
   --h3-size: 1.25rem;      /* 20px */
   --h3-weight: 600;
   --h3-line-height: 1.35;
   --h3-letter-spacing: 0px;
 
-   /* pre set 4  poppins regular */
+  /* pre set 4  poppins regular */
   --h4-size: .9375rem;      /* 15px */
   --h4-weight: 400;
   --h4-line-height: 1.4;
   --h4-letter-spacing: 0px;
-
-   /* pre set 5 poppins regular */
+  
+  /* pre set 5 poppins regular */
   --h5-size: .8125rem;      /* 13px */
   --h5-weight: 400;
   --h5-line-height: 1.6;
@@ -62,7 +57,7 @@
   --h1-mobile-weight: 600;
   --h1-mobile-line-height: 1.4;
   --h1-mobile-letter-spacing: .25px;
-
+  
   --h2-mobile-size: 1.5rem;      /* 24px */
   --h2-mobile-weight: 200;
   --h2-mobile-line-height: 1.4;
@@ -72,7 +67,7 @@
   --h4-mobile-weight: 400;
   --h4-mobile-line-height: 1.4;
   --h4-mobile-letter-spacing: 0px;
-
+  
   /* below 352px width */
   --below-352-size: 1rem;     /* 16px */
   --below-352-weight-600: 600;
@@ -80,50 +75,82 @@
   --below-352-height: 1;
   --below-352-letter-spacing: 0px;
 
-  /* attribution */
-  --attribution-size:.625rem;
-
   /* -------------------------------- */
-
-  /* Spacing */
-  --spacing-100: 0.5rem;  /* 8px */
-  --spacing-200: 1rem;    /* 16px */
-  --spacing-300: 1.5rem;  /* 24px */
-  --spacing-400: 2rem;    /* 32px */
-  --spacing-500: 2.5rem;    /* 40px */  
+  
+  /* Spacing  - Based on 16px*/
+  --spacing-50: 0.5rem;  /* 8px */
+  --spacing-100: 1rem;    /* 16px */
+  --spacing-150: 1.5rem;  /* 24px */
+  --spacing-200: 2rem;    /* 32px */
+  --spacing-250: 2.5rem;    /* 40px */  
 }
 
-.outer-wrapper{
+body{
+ font-family: 'Poppins', sans-serif;
+ background-color: var(--white);
+ height: 100vh;
+}
+
+.main-container{
   display: grid;
   grid-template-columns: minmax(163px, 1fr) minmax(0, 1114px) minmax(163px, 1fr);
-  grid-template-rows: minmax(102px, 1fr) minmax(0, 743px) minmax(102px, 1fr);
+  grid-template-rows: 1fr minmax(0, 760px) 1fr;
   justify-content: center;
   align-content: start;
+  height: 100%;
 }
 
-.row-title{
+.title-container{
   grid-column: 2;
   grid-row: 2;
   height: 137px;
   display: grid;
   grid-template-rows: 1fr 1fr; 
-  gap: 16px;
+  gap: var(--spacing-100);
   align-self: start;
 }
 
-.row-title-top{
- display: grid;
- justify-content: center; /* Horizontally centers the text */
- align-content: start;    /* Vertically aligns text to the top */
+.title-container-top{
+  display: grid;
+  justify-content: center; /* Horizontally centers the text */
+  align-content: start;    /* Vertically aligns text to the top */
 } 
 
-.row-title-bottom{
- display: grid;
- justify-content: center; /* Horizontally centers the text */
- align-content: start;    /* Vertically aligns text to the top */
+h2, .title{
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+  text-align: center;
+  color: var(--grey-500);
+}
+
+h1{
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+  text-align: center;
+  color: var(--grey-500);
+}
+
+.title-container-bottom{
+  display: grid;
+  justify-content: center; /* Horizontally centers the text */
+  align-content: start;    /* Vertically aligns text to the top */
 } 
 
-.row-boxes{
+h4, .title-description{
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+  text-align: center;
+  color: var(--grey-500);
+}
+
+/* .row-boxes{ */
+.box-container{
   grid-column: 2;
   align-self: end;
   grid-row: 2;
@@ -138,10 +165,11 @@
 .box{
   display: grid;
   grid-auto-flow: row;
-  padding: 32px;
-  row-gap:32px ;
-  border-radius: 8px;
-  box-shadow: 4px 4px 10px 2px #979797;
+  padding: var(--spacing-200);
+  row-gap:var(--spacing-200) ;
+  border-radius: var(--spacing-50);
+  /* ? check what color this should be in figma file */
+  box-shadow: 4px 4px 10px 2px hsl(0, 0%, 59%);
 }
 
 /* team box */
@@ -172,25 +200,7 @@
   border-top:4px solid var(--blue);
 }
 
-h1{
-  font-size: var(--h1-size);
-  font-weight: var(--h1-weight);
-  line-height: var(--h1-line-height);
-  letter-spacing: var(--h1-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
-}
-
-h2{
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  line-height: var(--h2-line-height);
-  letter-spacing: var(--h2-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
-}
-
-h3{
+h3, .box-title{
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
   line-height: var(--h3-line-height);
@@ -199,16 +209,7 @@ h3{
   color: var(--grey-500);
 }
 
-h4{
-  font-size: var(--h4-size);
-  font-weight: var(--h4-weight);
-  line-height: var(--h4-line-height);
-  letter-spacing: var(--h4-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
-}
-
-h5{
+h5, .box-description{
   font-size: var(--h5-size);
   font-weight: var(--h5-weight);
   line-height: var(--h5-line-height);
@@ -227,47 +228,43 @@ h5{
   width: 64px;
 }
 
-.row-top{
+/* .row-top{
   display: grid;
   grid-template-rows: auto auto;
   place-items: start center;
   background-color: aqua;
   width: 1114px;
-  row-gap: 16px;
-}
+  row-gap: var(--spacing-100);
+} */
 
-.top-section{
-    background-color: aquamarine;
-    width: 50px;
-}
+/* .top-section{
+  background-color: aquamarine;
+  width: 50px;
+} */
 
-.bottom-section{
+/* .bottom-section{
    background-color:burlywood ;
    width: 50px;
-}
+} */
 
-.attribution{
-  grid-column: 2;
-  grid-row:3;
-  justify-self:center ;
-  align-self: end;
-  font-size: var(--attribution-size);
-}
-
-
-/* break point 1066 */
-/*  tablet 768 x 1206*/
 @media screen and (max-width:1066px){
-  .outer-wrapper{
+
+  body{
+    height: 100%;
+  }
+  
+  .main-container{
     grid-template-columns: minmax(54px, 1fr) minmax(0, 660px) minmax(54px, 1fr);
    grid-template-rows: minmax(80px, 1fr) minmax(0, 1046px) minmax(80px, 1fr);
+   height: 100%;
   }
 
-  .row-title{
+  .title-container{
     height: 158px;
   }
 
-  .row-boxes{
+  /* .row-boxes{ */
+  .box-container{
     grid-template-columns: repeat(330, minmax(0,1fr));
     grid-template-rows: repeat(407,minmax(0,1fr));
     max-width: 660px;
@@ -304,7 +301,7 @@ h5{
 
 @media screen and (max-width:554px){
 
-  .outer-wrapper{
+  .main-container{
     grid-template-rows: minmax(60px, 1fr) minmax(0, 1046px) minmax(60px, 1fr);
   }
 
@@ -317,7 +314,7 @@ h5{
   color: var(--grey-500);
 }
 
- h2{
+ h2, .title{
   font-size: var(--h2-mobile-size);
   font-weight: var(--h2-mobile-weight);
   line-height: var(--h2-line-mobile-height);
@@ -326,7 +323,7 @@ h5{
   color: var(--grey-500);
 }
 
-h4{
+h4, .title-description{
   font-size: var(--h4-mobile-size);
   font-weight: var(--h4-mobile-weight);
   line-height: var(--h4-mobile-line-height);
@@ -338,17 +335,18 @@ h4{
 
 
 @media screen and (max-width:540px){
-  .outer-wrapper{
+
+  .main-container{
     grid-template-columns: minmax(30px, 1fr) minmax(0, 314px) minmax(30px, 1fr);
     grid-template-rows: minmax(47px, 1fr) minmax(0, 1311px) minmax(47px, 1fr);
   }
 
-
-  .row-title{
+  .title-container{
     height: 147px;
   }
 
-  .row-boxes{
+  /* .row-boxes{ */
+  .box-container{
     grid-template-columns: repeat(157, minmax(0,1fr));
     grid-template-rows: repeat(548,minmax(0,1fr));
     max-width: 375px;
@@ -388,7 +386,7 @@ h4{
   color: var(--grey-500);
 }
 
-h2{
+h2, .title{
   font-size: var(--h2-mobile-size);
   font-weight: var(--h2-mobile-weight);
   line-height: var(--h2-line-mobile-height);
@@ -397,16 +395,7 @@ h2{
   color: var(--grey-500);
 }
 
-h3{
-  font-size: var(--h3-size);
-  font-weight: var(--h3-weight);
-  line-height: var(--h3-line-height);
-  letter-spacing: var(--h3-letter-spacing);
-  text-align: left;
-  color: var(--grey-500);
-}
-
-h4{
+h4, .title-description{
   font-size: var(--h4-mobile-size);
   font-weight: var(--h4-mobile-weight);
   line-height: var(--h4-mobile-line-height);
@@ -415,7 +404,17 @@ h4{
   color: var(--grey-500);
 }
 
-h5{
+h3, .box-title{
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+  text-align: left;
+  color: var(--grey-500);
+}
+
+
+h5, .box-description{
   font-size: var(--h5-size);
   font-weight: var(--h5-weight);
   line-height: var(--h5-line-height);
@@ -423,36 +422,24 @@ h5{
   text-align: left;
   color: var(--grey-400);
 }
-
-
 }
 
 @media screen and (max-width:352px){
   
-  .row-title{
+  .title-container{
     grid-template-rows: .30fr .70fr;
     height: 164px;
   }
 
-  h1, h2{
+  h1, h2, .title{
    font-size: var(--below-352-size);
    font-weight: var(--below-352-weight-600);
    line-height: var(--below-352-line-height);
    letter-spacing: var(--below-352-letter-spacing);
   }
 
-  h2{
+  h2, .title{
    font-weight: var(--below-352-weight-200);
-  }
-
-  .attribution{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width:100%;
-  }
-
-  article{
-    justify-self: center;
   }
 
 }
