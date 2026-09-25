@@ -26,8 +26,8 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 
 ### What I learned
 
- - The biggest challenge was re-arranging the order of the four content boxes as one goes between desktop to mobile.  The Team Builder box is the top box in desktop, while Supervisor becomes the top box in mobile.
+ - The biggest challenge was re-arranging the order of the four content boxes when one goes from desktop to mobile.  For example the Team Builder box is at the top on desktop, while Supervisor becomes the top box on mobile.
 
- - Utilized CSS Grid and media-screen to move the content boxes to different positions as the screen size changes. 
+ - Utilized CSS Grid and media queries to create a responsive layout that repositions content as the screen size changes.
  
 
