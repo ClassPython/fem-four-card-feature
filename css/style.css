@@ -34,6 +34,7 @@
   --h2-weight: 200;
   --h2-line-height: 1.4;
   --h2-letter-spacing: .25px;
+
   /* pre set 3  poppins semi-bold*/
   --h3-size: 1.25rem;      /* 20px */
   --h3-weight: 600;
@@ -68,13 +69,6 @@
   --h4-mobile-line-height: 1.4;
   --h4-mobile-letter-spacing: 0px;
   
-  /* below 352px width */
-  --below-352-size: 1rem;     /* 16px */
-  --below-352-weight-600: 600;
-  --below-352-weight-200: 200;
-  --below-352-height: 1;
-  --below-352-letter-spacing: 0px;
-
   /* -------------------------------- */
   
   /* Spacing  - Based on 16px*/
@@ -83,6 +77,7 @@
   --spacing-150: 1.5rem;  /* 24px */
   --spacing-200: 2rem;    /* 32px */
   --spacing-250: 2.5rem;    /* 40px */  
+  --spacing-400: 4rem;    /* 64px */  
 }
 
 body{
@@ -94,29 +89,33 @@ body{
 .main-container{
   display: grid;
   grid-template-columns: minmax(163px, 1fr) minmax(0, 1114px) minmax(163px, 1fr);
-  grid-template-rows: 1fr minmax(0, 760px) 1fr;
+  grid-template-rows: 1fr minmax(0, 764px) 1fr;
   justify-content: center;
   align-content: start;
   height: 100%;
 }
 
+/* title and description at top */
 .title-container{
   grid-column: 2;
   grid-row: 2;
-  height: 137px;
+  height: 158px;
   display: grid;
+  grid-template-columns: 1fr minmax(0, 540px) 1fr;
   grid-template-rows: 1fr 1fr; 
   gap: var(--spacing-100);
   align-self: start;
 }
 
 .title-container-top{
+  grid-column: 2;
+  grid-row: 1;
   display: grid;
   justify-content: center; /* Horizontally centers the text */
   align-content: start;    /* Vertically aligns text to the top */
 } 
 
-h2, .title{
+.description{
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
   line-height: var(--h2-line-height);
@@ -125,7 +124,7 @@ h2, .title{
   color: var(--grey-500);
 }
 
-h1{
+.title{
   font-size: var(--h1-size);
   font-weight: var(--h1-weight);
   line-height: var(--h1-line-height);
@@ -135,12 +134,14 @@ h1{
 }
 
 .title-container-bottom{
+  grid-column: 2;
+  grid-row: 2;
   display: grid;
   justify-content: center; /* Horizontally centers the text */
   align-content: start;    /* Vertically aligns text to the top */
 } 
 
-h4, .title-description{
+.title-description{
   font-size: var(--h4-size);
   font-weight: var(--h4-weight);
   line-height: var(--h4-line-height);
@@ -149,7 +150,7 @@ h4, .title-description{
   color: var(--grey-500);
 }
 
-/* .row-boxes{ */
+/* boxes */
 .box-container{
   grid-column: 2;
   align-self: end;
@@ -165,11 +166,12 @@ h4, .title-description{
 .box{
   display: grid;
   grid-auto-flow: row;
-  padding: var(--spacing-200);
+  padding:var(--spacing-200);
   row-gap:var(--spacing-200) ;
   border-radius: var(--spacing-50);
-  /* ? check what color this should be in figma file */
-  box-shadow: 4px 4px 10px 2px hsl(0, 0%, 59%);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);            
+  box-sizing: border-box;
 }
 
 /* team box */
@@ -200,7 +202,8 @@ h4, .title-description{
   border-top:4px solid var(--blue);
 }
 
-h3, .box-title{
+/* reusable box content */
+.box-title{
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
   line-height: var(--h3-line-height);
@@ -209,13 +212,14 @@ h3, .box-title{
   color: var(--grey-500);
 }
 
-h5, .box-description{
+.box-description{
   font-size: var(--h5-size);
   font-weight: var(--h5-weight);
   line-height: var(--h5-line-height);
   letter-spacing: var(--h5-letter-spacing);
   text-align: left;
   color: var(--grey-400);
+  margin-top: var(--spacing-50);
 }
 
 .icon-section{
@@ -224,143 +228,97 @@ h5, .box-description{
 }
 
 .icon{
-  height: 64px;
-  width: 64px;
+  max-height:  var(--spacing-400);
+  max-width: var(--spacing-400);
 }
-
-/* .row-top{
-  display: grid;
-  grid-template-rows: auto auto;
-  place-items: start center;
-  background-color: aqua;
-  width: 1114px;
-  row-gap: var(--spacing-100);
-} */
-
-/* .top-section{
-  background-color: aquamarine;
-  width: 50px;
-} */
-
-/* .bottom-section{
-   background-color:burlywood ;
-   width: 50px;
-} */
 
 @media screen and (max-width:1066px){
 
-  body{
-    height: 100%;
+body{
+  height: 100%;
+}
+  
+.main-container{
+  grid-template-columns: minmax(54px, 1fr) minmax(0, 660px) minmax(54px, 1fr);
+  grid-template-rows: minmax(80px, 1fr) minmax(0, 1046px) minmax(80px, 1fr);
+  height: 100%;
   }
   
-  .main-container{
-    grid-template-columns: minmax(54px, 1fr) minmax(0, 660px) minmax(54px, 1fr);
-   grid-template-rows: minmax(80px, 1fr) minmax(0, 1046px) minmax(80px, 1fr);
-   height: 100%;
-  }
+.title-container{
+  height: 158px;
+}
 
-  .title-container{
-    height: 158px;
-  }
-
-  /* .row-boxes{ */
-  .box-container{
-    grid-template-columns: repeat(330, minmax(0,1fr));
-    grid-template-rows: repeat(407,minmax(0,1fr));
-    max-width: 660px;
-    height: 814px;
-  }
+.box-container{
+  grid-template-columns: repeat(330, minmax(0,1fr));
+  grid-template-rows: repeat(407,minmax(0,1fr));
+  max-width: 660px;
+  height: 814px;
+}
 
   /* team */
-  .one{
-     grid-column:86/243;
-     grid-row:1/125;
-  }
+.one{
+  grid-column:86/243;
+  grid-row:1/126;
+}
 
-  /* sup */
-  .two{
-    grid-column:1/157 ;
-    grid-row: 141/266;
-
-  }
+  /* supervisor */
+.two{
+  grid-column:1/158 ;
+  grid-row: 141/266;
+}
 
   /* karma */
-  .three{
-    grid-column:173/330 ;
-    grid-row:141/266 ;
-  }
+.three{
+  grid-column:173/330 ;
+  grid-row:141/266 ;
+}
   
-  /*calc  */
-  .four{
-    grid-column:86/243;
-    grid-row: 282/407;
-  }
+  /*calculator */
+.four{
+  grid-column:86/243;
+  grid-row: 282/407;
+}
 
 }
 
 
-@media screen and (max-width:554px){
+@media screen and (max-width:675px){
 
-  .main-container{
-    grid-template-rows: minmax(60px, 1fr) minmax(0, 1046px) minmax(60px, 1fr);
-  }
-
-  h1{
-  font-size: var(--h1-mobile-size);
-  font-weight: var(--h1-mobile-weight);
-  line-height: var(--h1-mobile-line-height);
-  letter-spacing: var(--h1-mobile-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
+.main-container{
+  grid-template-columns: minmax(29.5px, 1fr) minmax(0, 316px) minmax(29.5px, 1fr);
+  grid-template-rows: minmax(51px, 1fr) minmax(0, 1303px) minmax(51px, 1fr);
 }
 
- h2, .title{
-  font-size: var(--h2-mobile-size);
-  font-weight: var(--h2-mobile-weight);
-  line-height: var(--h2-line-mobile-height);
-  letter-spacing: var(--h2-mobile-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
+.title-container{
+  height: 147px;
+  grid-template-columns: 1fr;
 }
 
-h4, .title-description{
-  font-size: var(--h4-mobile-size);
-  font-weight: var(--h4-mobile-weight);
-  line-height: var(--h4-mobile-line-height);
-  letter-spacing: var(--h4-mobile-letter-spacing);
-  text-align: center;
-  color: var(--grey-500);
-}
+.title-container-top{
+  grid-column: 1;
+  grid-row: 1;
 }
 
+.title-container-bottom{
+  grid-column: 1;
+  grid-row: 2;
+}
 
-@media screen and (max-width:540px){
-
-  .main-container{
-    grid-template-columns: minmax(30px, 1fr) minmax(0, 314px) minmax(30px, 1fr);
-    grid-template-rows: minmax(47px, 1fr) minmax(0, 1311px) minmax(47px, 1fr);
-  }
-
-  .title-container{
-    height: 147px;
-  }
-
-  /* .row-boxes{ */
-  .box-container{
-    grid-template-columns: repeat(157, minmax(0,1fr));
-    grid-template-rows: repeat(548,minmax(0,1fr));
-    max-width: 375px;
-    height: 1096px;
-  }
+.box-container{
+  grid-template-columns: repeat(157, minmax(0,1fr));
+  grid-template-rows: repeat(548,minmax(0,1fr));
+  max-width: 375px;
+  min-height: 1096px;
+}
 
 /* team box */
-  .one{
+.one{
   grid-column: 1/157;
   grid-row: 141/266;
 }
 
 /* supervisor box */
-  .two{
+.two{
   grid-column: 1/157;
   grid-row: 1/125;
 }
@@ -377,7 +335,7 @@ h4, .title-description{
   grid-row: 423/548;
 }
 
-  h1{
+.title{
   font-size: var(--h1-mobile-size);
   font-weight: var(--h1-mobile-weight);
   line-height: var(--h1-mobile-line-height);
@@ -386,16 +344,16 @@ h4, .title-description{
   color: var(--grey-500);
 }
 
-h2, .title{
+.description{
   font-size: var(--h2-mobile-size);
   font-weight: var(--h2-mobile-weight);
-  line-height: var(--h2-line-mobile-height);
+  line-height: var(--h2-mobile-line-height);
   letter-spacing: var(--h2-mobile-letter-spacing);
   text-align: center;
   color: var(--grey-500);
 }
 
-h4, .title-description{
+.title-description{
   font-size: var(--h4-mobile-size);
   font-weight: var(--h4-mobile-weight);
   line-height: var(--h4-mobile-line-height);
@@ -404,7 +362,7 @@ h4, .title-description{
   color: var(--grey-500);
 }
 
-h3, .box-title{
+.box-title{
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
   line-height: var(--h3-line-height);
@@ -413,8 +371,7 @@ h3, .box-title{
   color: var(--grey-500);
 }
 
-
-h5, .box-description{
+.box-description{
   font-size: var(--h5-size);
   font-weight: var(--h5-weight);
   line-height: var(--h5-line-height);
@@ -424,23 +381,36 @@ h5, .box-description{
 }
 }
 
-@media screen and (max-width:352px){
+@media screen and (max-width:375px) {
+.box{
+  width: 314px;
+}  
+}
+
+@media screen and (max-width:360px){
+
+.box{
+  width: 100%;
+  padding: var(--spacing-100);
+}
   
-  .title-container{
-    grid-template-rows: .30fr .70fr;
-    height: 164px;
-  }
+.title-container{
+  grid-template-rows: .30fr .70fr;
+  height: 164px;
+}
 
-  h1, h2, .title{
-   font-size: var(--below-352-size);
-   font-weight: var(--below-352-weight-600);
-   line-height: var(--below-352-line-height);
-   letter-spacing: var(--below-352-letter-spacing);
-  }
+.title{
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+}
 
-  h2, .title{
-   font-weight: var(--below-352-weight-200);
-  }
-
+.description{
+  font-size: var(--h4-size);
+  font-weight: var(--h2-mobile-weight);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+}
 }
 
