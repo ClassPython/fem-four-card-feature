@@ -175,28 +175,28 @@ body{
 }
 
 /* team box */
-.one{
+.card-team{
   grid-column: 192/367;
   grid-row: 1/126;
   border-top:4px solid var(--red);
 }
 
 /* supervisor box */
-.two{
+.card-supervisor{
   grid-column: 1/176;
   grid-row: 63/188;
   border-top:4px solid var(--cyan);
 }
 
 /* karma box */
-.three{
+.card-karma{
   grid-column: 192/367;
   grid-row: 141/266;
   border-top:4px solid var(--orange);
 }
 
 /* calculator box */
-.four{
+.card-calculator{
   grid-column: 382/557;
   grid-row: 63/188;
   border-top:4px solid var(--blue);
@@ -256,25 +256,25 @@ body{
 }
 
   /* team */
-.one{
+.card-team{
   grid-column:86/243;
   grid-row:1/126;
 }
 
   /* supervisor */
-.two{
+.card-supervisor{
   grid-column:1/158 ;
   grid-row: 141/266;
 }
 
   /* karma */
-.three{
+.card-karma{
   grid-column:173/330 ;
   grid-row:141/266 ;
 }
   
   /*calculator */
-.four{
+.card-calculator{
   grid-column:86/243;
   grid-row: 282/407;
 }
@@ -312,25 +312,25 @@ body{
 }
 
 /* team box */
-.one{
+.card-team{
   grid-column: 1/157;
   grid-row: 141/266;
 }
 
 /* supervisor box */
-.two{
+.card-supervisor{
   grid-column: 1/157;
   grid-row: 1/125;
 }
 
 /* karma box */
-.three{
+.card-karma{
   grid-column: 1/157;
   grid-row: 282/407;
 }
 
 /* calculator box */
-.four{
+.card-calculator{
   grid-column: 1/157;
   grid-row: 423/548;
 }
@@ -359,15 +359,6 @@ body{
   line-height: var(--h4-mobile-line-height);
   letter-spacing: var(--h4-mobile-letter-spacing);
   text-align: center;
-  color: var(--grey-500);
-}
-
-.box-title{
-  font-size: var(--h3-size);
-  font-weight: var(--h3-weight);
-  line-height: var(--h3-line-height);
-  letter-spacing: var(--h3-letter-spacing);
-  text-align: left;
   color: var(--grey-500);
 }
 
