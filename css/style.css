@@ -184,7 +184,7 @@ body{
 /* supervisor box */
 .card-supervisor{
   grid-column: 1/176;
-  grid-row: 63/188;
+  grid-row: 71/196;
   border-top:4px solid var(--cyan);
 }
 
@@ -198,7 +198,7 @@ body{
 /* calculator box */
 .card-calculator{
   grid-column: 382/557;
-  grid-row: 63/188;
+  grid-row: 71/196;
   border-top:4px solid var(--blue);
 }
 
